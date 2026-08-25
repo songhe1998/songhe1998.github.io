@@ -27,7 +27,7 @@ test("ships required GitHub Pages assets", async () => {
     access(new URL("../dist/client/.nojekyll", import.meta.url)),
     access(new URL("../dist/client/profile.jpg", import.meta.url)),
     access(new URL("../dist/client/pub-3dgs.png", import.meta.url)),
-    access(new URL("../dist/client/pub-aaai-backdoor.png", import.meta.url)),
+    access(new URL("../dist/client/pub-aaai-figure1.png", import.meta.url)),
     access(new URL("../dist/client/pub-fmfl.png", import.meta.url)),
     access(new URL("../dist/client/pub-armor.png", import.meta.url)),
     access(new URL("../dist/client/pub-mobility.png", import.meta.url)),

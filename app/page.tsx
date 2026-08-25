@@ -44,7 +44,7 @@ const publications = [
     year: "2024",
     title: "Temporal-Distributed Backdoor Attack Against Video Based Action Recognition",
     authors: ["Xi Li", "Songhe Wang", "Ruiquan Huang", "Mahanth Gowda", "George Kesidis"],
-    image: "/pub-aaai-backdoor.png",
+    image: "/pub-aaai-figure1.png",
     imagePosition: "center",
     links: [
       { label: "Paper", href: "https://ojs.aaai.org/index.php/AAAI/article/view/28104" },
