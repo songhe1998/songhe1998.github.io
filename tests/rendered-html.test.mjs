@@ -11,10 +11,14 @@ test("exports the complete academic homepage", async () => {
   assert.match(html, /About Me/);
   assert.match(html, /Publications/);
   assert.match(html, /When 3D Gaussian Splatting Recovers Real Surfaces/);
+  assert.match(html, /June 2026/);
   assert.match(html, /Research Scientist/);
   assert.match(html, /University of North Carolina at Chapel Hill/);
   assert.match(html, /profile\.jpg/);
   assert.match(html, /scholar\.google\.com/);
+  assert.doesNotMatch(html, /Deformable Contact-Aware 3D Object Placement|NeurIPS, 2026/);
+  assert.doesNotMatch(html, /Joined BoostDraft as a Research Scientist/);
+  assert.doesNotMatch(html, /Education &amp; Honors|Teaching &amp; Service/);
   assert.doesNotMatch(html, /Your site is taking shape|codex-preview|SkeletonPreview/);
 });
 
@@ -22,8 +26,12 @@ test("ships required GitHub Pages assets", async () => {
   await Promise.all([
     access(new URL("../dist/client/.nojekyll", import.meta.url)),
     access(new URL("../dist/client/profile.jpg", import.meta.url)),
-    access(new URL("../dist/client/pub-dcap.png", import.meta.url)),
     access(new URL("../dist/client/pub-3dgs.png", import.meta.url)),
+    access(new URL("../dist/client/pub-aaai-backdoor.png", import.meta.url)),
+    access(new URL("../dist/client/pub-fmfl.png", import.meta.url)),
+    access(new URL("../dist/client/pub-armor.png", import.meta.url)),
+    access(new URL("../dist/client/pub-mobility.png", import.meta.url)),
+    access(new URL("../dist/client/pub-semantic-retrieval.png", import.meta.url)),
     access(new URL("../dist/client/Songhe_Wang_CV.pdf", import.meta.url)),
     access(new URL("../.github/workflows/pages.yml", import.meta.url)),
     access(new URL("public/profile.jpg", root)),

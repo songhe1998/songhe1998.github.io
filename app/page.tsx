@@ -8,12 +8,8 @@ export const metadata: Metadata = {
 
 const news = [
   {
-    date: "Aug. 2026",
-    text: "Two papers on 3D Gaussian Splatting and deformable 3D object placement will appear at ECCV 2026 and NeurIPS 2026.",
-  },
-  {
-    date: "Sept. 2024",
-    text: "Joined BoostDraft as a Research Scientist, working on LLM-powered systems for legal documents.",
+    date: "June 2026",
+    text: "Our paper “When 3D Gaussian Splatting Recovers Real Surfaces” was accepted to ECCV 2026.",
   },
   {
     date: "May 2024",
@@ -44,19 +40,12 @@ const publications = [
     links: [],
   },
   {
-    venue: "NeurIPS",
-    year: "2026",
-    title: "Deformable Contact-Aware 3D Object Placement",
-    authors: ["Songhe Wang", "David Jonathan Miller"],
-    image: "/pub-dcap.png",
-    imagePosition: "center",
-    links: [],
-  },
-  {
     venue: "AAAI",
     year: "2024",
     title: "Temporal-Distributed Backdoor Attack Against Video Based Action Recognition",
     authors: ["Xi Li", "Songhe Wang", "Ruiquan Huang", "Mahanth Gowda", "George Kesidis"],
+    image: "/pub-aaai-backdoor.png",
+    imagePosition: "center",
     links: [
       { label: "Paper", href: "https://ojs.aaai.org/index.php/AAAI/article/view/28104" },
       { label: "arXiv", href: "https://arxiv.org/abs/2308.11070" },
@@ -67,6 +56,8 @@ const publications = [
     year: "2023",
     title: "Backdoor Threats from Compromised Foundation Models to Federated Learning",
     authors: ["Xi Li", "Songhe Wang", "Chen Wu", "Hao Zhou", "Jiaqi Wang"],
+    image: "/pub-fmfl.png",
+    imagePosition: "center",
     links: [
       { label: "Paper", href: "https://arxiv.org/abs/2311.00144" },
       { label: "Workshop", href: "https://neurips.cc/virtual/2023/79028" },
@@ -76,15 +67,22 @@ const publications = [
   {
     venue: "ACM MM",
     year: "2021",
-    title: "E. Armor: A Benchmark for Meta-evaluation of Artificial Music",
-    authors: ["Songhe Wang", "Zheng Bao", "Jintong E."],
-    links: [],
+    title: "Armor: A Benchmark for Meta-evaluation of Artificial Music",
+    authors: ["Songhe Wang", "Zheng Bao", "Jingtong E"],
+    image: "/pub-armor.png",
+    imagePosition: "center",
+    links: [
+      { label: "Paper", href: "https://arxiv.org/abs/2108.12973" },
+      { label: "ACM", href: "https://doi.org/10.1145/3474085.3475700" },
+    ],
   },
   {
     venue: "CICTP",
     year: "2021",
     title: "A Spatial-Temporal Analysis of COVID-19's Impact on Human Mobility: The Case of the United States",
     authors: ["Songhe Wang", "Kangda Wei", "Lei Lin", "Weizi Li"],
+    image: "/pub-mobility.png",
+    imagePosition: "center",
     links: [
       { label: "Paper", href: "https://arxiv.org/abs/2010.03707" },
       { label: "Proceedings", href: "https://ascelibrary.org/doi/book/10.1061/9780784483565" },
@@ -95,6 +93,8 @@ const publications = [
     year: "2019",
     title: "Revealing the Importance of Semantic Retrieval for Machine Reading at Scale",
     authors: ["Yixin Nie", "Songhe Wang", "Mohit Bansal"],
+    image: "/pub-semantic-retrieval.png",
+    imagePosition: "center",
     links: [
       { label: "Paper", href: "https://aclanthology.org/D19-1258/" },
       { label: "Code", href: "https://github.com/easonnie/semanticRetrievalMRS" },
@@ -169,8 +169,7 @@ export default function Home() {
             I am a Computer Science Ph.D. candidate at <a href="https://www.psu.edu/" target="_blank" rel="noreferrer">Penn State University</a>.
             My research interests lie in <strong>computer vision</strong>, <strong>adversarial machine learning</strong>,
             <strong> large language models</strong>, and <strong>multi-agent systems</strong>. My recent work focuses on
-            physics-grounded 3D vision: understanding when 3D Gaussian Splatting represents real surfaces and enabling
-            deformable, contact-aware object placement in real scenes.
+            physics-grounded 3D vision, including understanding when 3D Gaussian Splatting represents real surfaces.
           </p>
           <p>
             Previously, I received my B.S. in Computer Science and Mathematics from the
@@ -187,22 +186,12 @@ export default function Home() {
         <section>
           <h2>News</h2>
           <ul className="news-list">
-            {news.slice(0, 5).map((item) => (
+            {news.map((item) => (
               <li key={item.date}>
                 <strong>[{item.date}]</strong> {item.text}
               </li>
             ))}
           </ul>
-          <details className="more-news">
-            <summary>More</summary>
-            <ul className="news-list">
-              {news.slice(5).map((item) => (
-                <li key={item.date}>
-                  <strong>[{item.date}]</strong> {item.text}
-                </li>
-              ))}
-            </ul>
-          </details>
         </section>
 
         <section>
@@ -212,18 +201,11 @@ export default function Home() {
             {publications.map((paper) => (
               <article className="publication" key={paper.title}>
                 <div className="publication-visual">
-                  {paper.image ? (
-                    <img
-                      src={paper.image}
-                      alt={`Thumbnail for ${paper.title}`}
-                      style={{ objectPosition: paper.imagePosition }}
-                    />
-                  ) : (
-                    <div className="venue-placeholder" aria-hidden="true">
-                      <span>{paper.venue}</span>
-                      <small>{paper.year}</small>
-                    </div>
-                  )}
+                  <img
+                    src={paper.image}
+                    alt={`Figure from ${paper.title}`}
+                    style={{ objectPosition: paper.imagePosition }}
+                  />
                   <span className="venue-badge">{paper.venue}</span>
                 </div>
                 <div className="publication-details">
@@ -258,25 +240,6 @@ export default function Home() {
               </article>
             ))}
           </div>
-        </section>
-
-        <section>
-          <h2>Education &amp; Honors</h2>
-          <ul>
-            <li><strong>Ph.D. in Computer Science</strong>, Penn State University, 2021 — Present. Ranked 1st in the Spring 2023 Ph.D. Qualifying Exam.</li>
-            <li><strong>B.S. in Computer Science &amp; Mathematics</strong>, UNC Chapel Hill, 2017 — 2021. Dean&apos;s List.</li>
-            <li>Putnam Mathematics Competition — top 1% nationwide.</li>
-            <li>Carolina Data Challenge — 1st place; Virginia Tech Math Competition — top 5% nationwide.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Teaching &amp; Service</h2>
-          <ul>
-            <li>Teaching Assistant, CSE 597: Vision and Language, Spring 2023.</li>
-            <li>Teaching Assistant, CMPSC 497: Deep Learning for Computer Vision, Fall 2022.</li>
-            <li>Reviewer: AAAI (2022 — 2023), EMNLP (2020), and the Workshop on Interactive and Executable Semantic Parsing.</li>
-          </ul>
         </section>
 
         <footer>
