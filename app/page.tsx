@@ -167,19 +167,11 @@ export default function Home() {
           <h2>About Me</h2>
           <p>
             I am a Computer Science Ph.D. candidate at <a href="https://www.psu.edu/" target="_blank" rel="noreferrer">Penn State University</a>.
-            My research interests lie in <strong>computer vision</strong>, <strong>adversarial machine learning</strong>,
-            <strong> large language models</strong>, and <strong>multi-agent systems</strong>. My recent work focuses on
-            physics-grounded 3D vision, including understanding when 3D Gaussian Splatting represents real surfaces.
+            My research interests lie in <strong>computer vision</strong> and <strong>MLLM</strong>. My recent work focuses on
+            <strong> 3D vision</strong> and <strong>video generation</strong>.
           </p>
           <p>
-            Previously, I received my B.S. in Computer Science and Mathematics from the
-            <a href="https://www.unc.edu/" target="_blank" rel="noreferrer"> University of North Carolina at Chapel Hill</a>,
-            where I worked on semantic retrieval for machine reading. I have also worked on video action recognition,
-            sign language understanding, trustworthy federated learning, and evaluation of AI-generated music.
-          </p>
-          <p>
-            Alongside academic research, I build applied LLM systems at <strong>BoostDraft</strong>. Outside the lab,
-            I am a professional Go player and a Chinese National Second-Level Athlete.
+            Previously, I worked on semantic retrieval and image captioning.
           </p>
         </section>
 

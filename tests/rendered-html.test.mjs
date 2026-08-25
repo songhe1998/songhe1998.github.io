@@ -13,11 +13,17 @@ test("exports the complete academic homepage", async () => {
   assert.match(html, /When 3D Gaussian Splatting Recovers Real Surfaces/);
   assert.match(html, /June 2026/);
   assert.match(html, /Research Scientist/);
-  assert.match(html, /University of North Carolina at Chapel Hill/);
+  assert.match(html, /computer vision/);
+  assert.match(html, /MLLM/);
+  assert.match(html, /3D vision/);
+  assert.match(html, /video generation/);
+  assert.match(html, /semantic retrieval and image captioning/);
   assert.match(html, /profile\.jpg/);
   assert.match(html, /scholar\.google\.com/);
   assert.doesNotMatch(html, /Deformable Contact-Aware 3D Object Placement|NeurIPS, 2026/);
   assert.doesNotMatch(html, /Joined BoostDraft as a Research Scientist/);
+  assert.doesNotMatch(html, /Alongside academic research|professional Go player|Chinese National Second-Level Athlete/);
+  assert.doesNotMatch(html, /adversarial machine learning|multi-agent systems|University of North Carolina at Chapel Hill/);
   assert.doesNotMatch(html, /Education &amp; Honors|Teaching &amp; Service/);
   assert.doesNotMatch(html, /Your site is taking shape|codex-preview|SkeletonPreview/);
 });

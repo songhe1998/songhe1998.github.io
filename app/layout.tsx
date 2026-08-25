@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     url: "https://songhe1998.github.io",
     title: "Songhe Wang | Penn State University",
     description:
-      "Computer vision, adversarial machine learning, large language models, and multi-agent systems.",
+      "Computer vision, multimodal large language models, 3D vision, and video generation.",
     siteName: "Songhe Wang",
   },
   twitter: {
     card: "summary",
     title: "Songhe Wang | Penn State University",
     description:
-      "Computer vision, adversarial machine learning, large language models, and multi-agent systems.",
+      "Computer vision, multimodal large language models, 3D vision, and video generation.",
   },
 };
 
