@@ -26,9 +26,9 @@ The static site is generated in `dist/client`.
 
 - Homepage content: `app/page.tsx`
 - Visual styling: `app/globals.css`
-- Site metadata and social preview: `app/layout.tsx`
+- Site metadata: `app/layout.tsx`
 - CV download: `public/Songhe_Wang_CV.pdf`
-- Social preview image: `public/og.png`
+- Profile photo and publication thumbnails: `public/`
 
 ## GitHub Pages
 
