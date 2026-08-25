@@ -1,44 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://songhe1998.github.io"),
-  title: "Songhe Wang — Computer Vision Researcher",
+  title: "Songhe Wang | Penn State University",
   description:
-    "Academic homepage of Songhe Wang, a Ph.D. researcher in computer vision and machine learning at Penn State.",
+    "Academic homepage of Songhe Wang, a Computer Science Ph.D. candidate at Penn State University.",
   openGraph: {
     type: "website",
     url: "https://songhe1998.github.io",
-    title: "Songhe Wang — Computer Vision Researcher",
+    title: "Songhe Wang | Penn State University",
     description:
-      "Physics-grounded 3D vision, adversarial machine learning, and intelligent systems.",
+      "Computer vision, adversarial machine learning, large language models, and multi-agent systems.",
     siteName: "Songhe Wang",
-    images: [
-      {
-        url: "/og.png",
-        width: 1732,
-        height: 909,
-        alt: "Songhe Wang — Computer Vision and Machine Learning",
-      },
-    ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Songhe Wang — Computer Vision Researcher",
+    card: "summary",
+    title: "Songhe Wang | Penn State University",
     description:
-      "Physics-grounded 3D vision, adversarial machine learning, and intelligent systems.",
-    images: ["/og.png"],
+      "Computer vision, adversarial machine learning, large language models, and multi-agent systems.",
   },
 };
 
@@ -49,9 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
