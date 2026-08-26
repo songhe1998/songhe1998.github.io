@@ -43,7 +43,7 @@ const publications = [
     venue: "AAAI",
     year: "2024",
     title: "Temporal-Distributed Backdoor Attack Against Video Based Action Recognition",
-    authors: ["Xi Li", "Songhe Wang", "Ruiquan Huang", "Mahanth Gowda", "George Kesidis"],
+    authors: ["Songhe Wang*", "Xi Li*", "Ruiquan Huang", "Mahanth Gowda", "George Kesidis"],
     image: "/pub-aaai-figure1.png",
     imagePosition: "center",
     links: [
@@ -128,12 +128,18 @@ const experience = [
 function AuthorList({ authors }: { authors: string[] }) {
   return (
     <>
-      {authors.map((author, index) => (
-        <span key={author}>
-          {author === "Songhe Wang" ? <strong>{author}</strong> : author}
-          {index < authors.length - 1 ? ", " : ""}
-        </span>
-      ))}
+      {authors.map((author, index) => {
+        const isEqualContribution = author.endsWith("*");
+        const name = isEqualContribution ? author.slice(0, -1) : author;
+        const label = <>{name}{isEqualContribution ? <sup>*</sup> : null}</>;
+
+        return (
+          <span key={author}>
+            {name === "Songhe Wang" ? <strong>{label}</strong> : label}
+            {index < authors.length - 1 ? ", " : ""}
+          </span>
+        );
+      })}
     </>
   );
 }
@@ -188,7 +194,7 @@ export default function Home() {
 
         <section>
           <h2>Publications</h2>
-          <p className="section-note">Selected publications. My name is shown in bold.</p>
+          <p className="section-note">Selected publications. My name is shown in bold. * Equal contribution.</p>
           <div className="publication-list">
             {publications.map((paper) => (
               <article className="publication" key={paper.title}>

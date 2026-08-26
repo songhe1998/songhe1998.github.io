@@ -11,6 +11,8 @@ test("exports the complete academic homepage", async () => {
   assert.match(html, /About Me/);
   assert.match(html, /Publications/);
   assert.match(html, /When 3D Gaussian Splatting Recovers Real Surfaces/);
+  assert.match(html, /Equal contribution/);
+  assert.match(html, /Songhe Wang<sup>\*<\/sup><\/strong>, <\/span><span>Xi Li<sup>\*<\/sup>/);
   assert.match(html, /June 2026/);
   assert.match(html, /Research Scientist/);
   assert.match(html, /computer vision/);
