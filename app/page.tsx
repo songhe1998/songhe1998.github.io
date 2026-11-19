@@ -79,7 +79,10 @@ const publications = [
     authors: ["Songhe Wang", "David Jonathan Miller"],
     image: "/pub-3dgs.png",
     imagePosition: "center",
-    links: [],
+    links: [
+      { label: "Paper", href: "https://arxiv.org/pdf/2608.30054" },
+      { label: "arXiv", href: "https://arxiv.org/abs/2608.30054" },
+    ],
   },
   {
     venue: "AAAI",
