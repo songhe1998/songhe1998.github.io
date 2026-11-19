@@ -24,7 +24,6 @@ test("exports the complete academic homepage", async () => {
   assert.match(html, /scholar\.google\.com/);
   assert.match(html, /data-goatcounter="https:\/\/songhe\.goatcounter\.com\/count"/);
   assert.match(html, /src="https:\/\/gc\.zgo\.at\/count\.js"/);
-  assert.doesNotMatch(html, /Deformable Contact-Aware 3D Object Placement|NeurIPS, 2026/);
   assert.doesNotMatch(html, /Joined BoostDraft as a Research Scientist/);
   assert.doesNotMatch(html, /Alongside academic research|professional Go player|Chinese National Second-Level Athlete/);
   assert.doesNotMatch(html, /adversarial machine learning|multi-agent systems|University of North Carolina at Chapel Hill/);

@@ -31,6 +31,44 @@ const news = [
 
 const publications = [
   {
+    venue: "CVPR submission",
+    year: "2027",
+    title: "WorldLifter: Photorealistic, Controllable, and Physics-Grounded Scene Generation from a Single Image",
+    authors: [],
+    image: "/pub-worldlifter.png",
+    imagePosition: "center",
+    imageFit: "contain" as const,
+    links: [
+      { label: "Paper", href: "/WorldLifter.pdf" },
+    ],
+  },
+  {
+    venue: "ICLR submission",
+    year: "2027",
+    title: "TripleFlow: Training-Free Video Object Removal by Bridging Residual Editing and Native Generation",
+    authors: ["Songhe Wang*", "Lifu Wei*", "Shuolin Xu", "Charles A. Kamhoua", "David Miller"],
+    image: "/pub-tripleflow.png",
+    imagePosition: "center",
+    imageFit: "contain" as const,
+    links: [
+      { label: "Paper", href: "https://arxiv.org/pdf/2609.39157" },
+      { label: "arXiv", href: "https://arxiv.org/abs/2609.39157" },
+    ],
+  },
+  {
+    venue: "NeurIPS",
+    year: "2026",
+    title: "Deformable Contact-Aware 3D Object Placement",
+    authors: ["Songhe Wang", "David Miller", "Charles A. Kamhoua"],
+    image: "/pub-dcap.png",
+    imagePosition: "center",
+    imageFit: "contain" as const,
+    links: [
+      { label: "Paper", href: "https://arxiv.org/pdf/2611.08005" },
+      { label: "arXiv", href: "https://arxiv.org/abs/2611.08005" },
+    ],
+  },
+  {
     venue: "ECCV",
     year: "2026",
     title: "When 3D Gaussian Splatting Recovers Real Surfaces",
@@ -202,13 +240,15 @@ export default function Home() {
                   <img
                     src={paper.image}
                     alt={`Figure from ${paper.title}`}
-                    style={{ objectPosition: paper.imagePosition }}
+                    style={{ objectPosition: paper.imagePosition, objectFit: paper.imageFit }}
                   />
                   <span className="venue-badge">{paper.venue}</span>
                 </div>
                 <div className="publication-details">
                   <h3>{paper.title}</h3>
-                  <p className="authors"><AuthorList authors={paper.authors} /></p>
+                  {paper.authors.length > 0 ? (
+                    <p className="authors"><AuthorList authors={paper.authors} /></p>
+                  ) : null}
                   <p className="publication-venue"><em>{paper.venue}, {paper.year}.</em></p>
                   {paper.links.length > 0 ? (
                     <div className="paper-links">
@@ -241,7 +281,7 @@ export default function Home() {
         </section>
 
         <footer>
-          <p>Last updated August 2026 · © Songhe Wang</p>
+          <p>Last updated November 2026 · © Songhe Wang</p>
         </footer>
       </main>
     </div>
