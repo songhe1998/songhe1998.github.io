@@ -34,7 +34,11 @@ const publications = [
     venue: "CVPR submission",
     year: "2027",
     title: "WorldLifter: Photorealistic, Controllable, and Physics-Grounded Scene Generation from a Single Image",
-    authors: [],
+    authors: [
+      "Lifu Wei", "Songhe Wang", "Shixun Huang", "Siyuan Chen", "Heng Zhang",
+      "Weijia Zeng", "Caoliwen Wang", "Yuyang Wang", "Kwang Moo Yi", "Chuang Gan",
+      "Bo Dong", "Xiao Cui", "Chao Liu", "David J. Miller", "Peter Yichen Chen",
+    ],
     image: "/pub-worldlifter.png",
     imagePosition: "center",
     imageFit: "contain" as const,
