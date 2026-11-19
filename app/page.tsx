@@ -35,7 +35,7 @@ const publications = [
     year: "2027",
     title: "WorldLifter: Photorealistic, Controllable, and Physics-Grounded Scene Generation from a Single Image",
     authors: [
-      "Lifu Wei", "Songhe Wang", "Shixun Huang", "Siyuan Chen", "Heng Zhang",
+      "Songhe Wang*", "Lifu Wei*", "Shixun Huang", "Siyuan Chen", "Heng Zhang",
       "Weijia Zeng", "Caoliwen Wang", "Yuyang Wang", "Kwang Moo Yi", "Chuang Gan",
       "Bo Dong", "Xiao Cui", "Chao Liu", "David J. Miller", "Peter Yichen Chen",
     ],
